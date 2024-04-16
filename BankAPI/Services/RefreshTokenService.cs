@@ -50,7 +50,7 @@ namespace BankAPI.Services
             var refreshToken = await GetRefreshTokenByToken(token);
             if (refreshToken != null)
             {
-                await _refreshToken.Delet(refreshToken);
+                await _refreshToken.Delete(refreshToken);
             }
         }
         private string GenerateToken(AccountHolder user)

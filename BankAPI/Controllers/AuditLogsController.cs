@@ -18,7 +18,7 @@ namespace BankAPI.Controllers
         [HttpGet("audit")]
         public async Task<IActionResult> GetAuditLogs()
         {
-            var auditLogs = await context.AuditLogs.ToListAsync();
+            var auditLogs = await context.AuditLogs.ToListAsync(); 
             return Ok(auditLogs);
         }
     }

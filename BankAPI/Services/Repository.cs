@@ -19,7 +19,7 @@ namespace BankAPI.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task Delet(T entity) 
+        public async Task Delete(T entity) 
         {
             _context.Remove(entity);
             await _context.SaveChangesAsync();

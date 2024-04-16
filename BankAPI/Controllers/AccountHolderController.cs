@@ -26,6 +26,11 @@ namespace BankAPI.Controllers
             
             _refreshTokenService = refreshTokenService;
         }
+        /// <summary>
+        /// Retrieves a list of bank accounts for a given account holder.
+        /// </summary>
+        /// <param name="accountHolderId">The ID of the account holder.</param>
+        /// <returns>The list of bank accounts.</returns>
         [AllowAnonymous]
         [HttpPost("login/{accountNumber}")]
         public async Task<IActionResult> Login(string accountNumber)
